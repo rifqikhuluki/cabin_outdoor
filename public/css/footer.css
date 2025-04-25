@@ -1,0 +1,169 @@
+:root {
+    --primary: #2c8ac4;
+    --bg: #0f0101;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg);
+    color: #fff;
+}
+
+/*footer*/
+footer{
+    background-color: black;
+    padding: 1rem 5rem;
+}
+
+footer .footer-head{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding-bottom: 2rem;
+}
+
+footer .footer-logo{
+    display: flex;
+    align-items: center;
+    float: right;
+    gap: 1rem;
+    font-size: large;
+}
+
+footer .footer-logo img{
+    width: 75px;
+}
+
+footer .footer-logo span{
+    color: var(--primary);
+}
+
+footer .sosials{
+    display: flex;
+    gap: 1rem;
+
+}
+
+footer .sosials a{
+    color: white;
+}
+
+.garis {
+    width: 100%; 
+    height: 2px;
+    background-color: rgb(255, 255, 255);
+    margin: 0 auto;
+}
+
+footer .footer-body{
+    display: flex;
+    padding-top: 3rem;
+}
+footer .footer-body > div{
+    flex: 1;
+    padding-right: 2rem;
+}
+
+footer .links a{
+    color: white;
+    display: flex;
+}
+
+footer .contac a{
+    color: white;
+    display: flex;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    gap: 1rem;
+}
+footer .credit{
+    text-align: center;
+    padding-top: 3rem;
+}
+
+footer .sosials a:hover{
+    color :var(--primary);
+    transition-duration: 300ms;
+}
+
+footer .links a:hover{
+    color: var(--primary);
+    transition-duration: 300ms;
+}
+
+footer .contac a:hover{
+    color: var(--primary);
+    transition-duration: 300ms;
+}
+/* Media Queries */
+
+/* Laptop */
+@media (max-width: 1366px) {
+    html {
+        font-size: 75%;
+    }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+    html {
+        font-size: 62.5%;
+    }
+
+
+    #hamburger-menu {
+        display: inline-block;
+    }
+
+
+    .navbar .navbar-nav {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        background-color: #fff;
+        width: 30rem;
+        height: 100vh;
+        transition: 0.3s;
+    }
+
+    .navbar .navbar-nav.active {
+        right: 0;
+    }
+
+    .navbar .navbar-nav a {
+        color: var(--bg);
+        display: block;
+        margin: 1.5rem;
+        padding: 0.5rem;
+        font-size: 2rem;
+    }
+
+    .navbar .navbar-nav a::after {
+        transform-origin: 0 0;
+    }
+
+    .navbar .navbar-nav a:hover::after {
+        transform: scaleX(0.2);
+    }
+
+    
+}
+
+/* Mobile Phone */
+@media (max-width: 450px) {
+    html {
+        font-size: 55%;
+    }
+}
+
+
