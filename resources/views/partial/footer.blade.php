@@ -18,7 +18,7 @@
     <script src="https://unpkg.com/feather-icons"></script>
 
     <!-- My Style -->
-    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
 
     <!-- My JavaScript -->
     <script src="js/script.js"></script>
@@ -30,7 +30,7 @@
 
         <div class="footer-head">
         <div class="footer-logo">
-            <img src="img/logo.png" alt="logo">
+            <img src="{{ asset('img/logo.png') }}" alt="logo">
             <h1>Cabin <span>Outdoor</span>.</h1>
         </div>
 
@@ -53,7 +53,7 @@
             <h3>Link</h3>
             <a href="/">Beranda</a>
             <a href="/tentang">Tentang Kami</a>
-            <a href="#">Katalog</a>
+            <a href="/katalog">Katalog</a>
             <a href="/sewa">Cara Sewa</a>
             <a href="/kontak">Kontak & Lokasi</a>
         </div>

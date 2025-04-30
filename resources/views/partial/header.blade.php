@@ -21,7 +21,7 @@
      <script src="js/script.js"></script>
 
     <!-- My Style -->
-    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="{{ asset('css/header.css') }}">
 </head>
 <body>
 
@@ -33,7 +33,7 @@
         <div class="navbar-nav">
             <a href="/">Beranda</a>
             <a href="/tentang">Tentang Kami</a>
-            <a href="#menu">Katalog</a>
+            <a href="/katalog">Katalog</a>
             <a href="/sewa">Cara Pesan</a>
             <a href="/kontak">Kontak & Lokasi</a>
         </div>

@@ -44,6 +44,10 @@ footer .footer-logo img{
     width: 75px;
 }
 
+footer .footer-logo h1{
+    color: white;
+}
+
 footer .footer-logo span{
     color: var(--primary);
 }
