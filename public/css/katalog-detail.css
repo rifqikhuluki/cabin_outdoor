@@ -56,29 +56,21 @@ body {
 
 .container {
     display: flex;
+    justify-content: first baseline;
+    align-items: center;
     background: #fff;
     overflow: hidden;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    flex-wrap: wrap;
-}
-
-.left {
-    flex: 1;
-    padding: 20px;
-    text-align: center;
+    padding: 2rem 25rem;
 }
 
 .main-image {
     width: 100%;
-    max-width: 400px;
+    height: 100%;
     border-radius: 8px;
+    border: 1rem;
 }
 
-.right {
-    flex: 1;
-    padding: 30px;
-    position: relative;
-}
 
 h2 {
     color:var(--primary);

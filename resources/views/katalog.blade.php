@@ -35,6 +35,8 @@
     </section>
 
     <!-- Hero Section End -->
+
+    <!--Katalog Section-->
     <section class="container">
         <div class="produk">
             <h1>List Peralatan Cabin <span>Outdoor</span>.</h1>
@@ -50,33 +52,30 @@
                         </a>
                     </div>
                 @endforeach
+            </div>
+
+        <div class="pagination">
+            @if ($products->onFirstPage())
+                <span class="disabled">&laquo;</span>
+            @else
+                <a href="{{ $products->previousPageUrl() }}">&laquo;</a>
+            @endif
+
+            @foreach ($products->getUrlRange(1, $products->lastPage()) as $page => $url)
+                @if ($page == $products->currentPage())
+                    <span class="active">{{ $page }}</span>
+                @else
+                    <a href="{{ $url }}">{{ $page }}</a>
+                @endif
+            @endforeach
+
+            @if ($products->hasMorePages())
+                <a href="{{ $products->nextPageUrl() }}">&raquo;</a>
+            @else
+                <span class="disabled">&raquo;</span>
+            @endif
         </div>
-
-<div class="pagination">
-    @if ($products->onFirstPage())
-        <span class="disabled">&laquo;</span>
-    @else
-        <a href="{{ $products->previousPageUrl() }}">&laquo;</a>
-    @endif
-
-    @foreach ($products->getUrlRange(1, $products->lastPage()) as $page => $url)
-        @if ($page == $products->currentPage())
-            <span class="active">{{ $page }}</span>
-        @else
-            <a href="{{ $url }}">{{ $page }}</a>
-        @endif
-    @endforeach
-
-    @if ($products->hasMorePages())
-        <a href="{{ $products->nextPageUrl() }}">&raquo;</a>
-    @else
-        <span class="disabled">&raquo;</span>
-    @endif
-</div>
-
     </section>
-    <!--Katalog Section-->
-
 
     @include('partial/footer')
 </body>
