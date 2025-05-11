@@ -39,7 +39,6 @@
     <section class="sewa">
         <div class="sewa-header">
             <h1>Sewa di Cabin <span>Outdoor</span>.</h1>
-            <h3>Sewa Cepat, Anti Ribet</h3>
         </div>
 
         <div class="sewa-container">
@@ -59,7 +58,7 @@
             </div>
             <div class="text2">
             <h3>Hubungi Kami</h3>
-            <p>Jika sudah mendapatkan alat yang anda inginkan, konfirmasi pesanan melalui Whatsapp</p>
+            <p>Jika sudah mendapatkan alat yang anda inginkan, Boking alat dengan memberikan DP terlebih dahulu, konfirmasi pesanan melalui Whatsapp,</p>
             </div>
         </div>
 
@@ -69,7 +68,7 @@
             </div>
             <div class="text3">
             <h3>Pembayaran</h3>
-            <p>Setelah konfirmasi, jangan lupa melakukan pembayaran, pembayaran dapat dilakukan secara langsung di basecamp atau dengan transfer</p>
+            <p>Setelah konfirmasi, jangan lupa melakukan pembayaran, pembayaran dapat dilakukan secara langsung di store atau dengan transfer</p>
             </div>        
         </div>
 
@@ -90,6 +89,17 @@
             <div class="text5">
             <h3>Berpetulang</h3>
             <p>Selamat berpetualang dengan aman bersama cabin outdoor</p>
+            </div>
+        </div>
+        </div>
+
+        <div class="sewa-main6">
+            <div class="img6">
+            <a href="#"><i data-feather="calendar" class="kalender"></i></a>
+            </div>
+            <div class="text6">
+            <h3>Pengembalian</h3>
+            <p>Setelah berpetualang, jangan lupa kembalikan alat yang disewa sesuai durasi sewa dengan dispensasi pengembalian 6 jam</p>
             </div>
         </div>
         </div>

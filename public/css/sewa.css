@@ -64,7 +64,7 @@ body {
 
 .sewa-header{
     color: black;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
 }
 
 .sewa-header h1{
@@ -201,5 +201,30 @@ body {
 }
 
 .sewa-main5 .text5 h3{
+    color: var(--primary);
+}
+
+.sewa-main6{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: #0f0101;
+    background-color: #EFEEEA;
+    border-radius: 15px;
+    width: 60%;
+    box-shadow: -10px 10px 00px 0px rgb(185, 185, 187);
+    margin-bottom: 2rem;
+}
+.sewa-main6 > div{
+    padding: 2rem;
+}
+
+.sewa-main6 .kalender{
+    color: var(--primary);
+    width: 50px;
+    height: 50px;
+}
+
+.sewa-main6 .text6 h3{
     color: var(--primary);
 }

@@ -28,7 +28,7 @@
 @include('partial/header')
 
 <!-- Hero Section Start -->
-<section class="hero" id="home" style="background-image: url('../img/{{ $product->gambar }}');">
+<section class="hero" id="home">
     <main class="content">
         <h1>{{ $product->nama_produk }}</h1>
     </main>

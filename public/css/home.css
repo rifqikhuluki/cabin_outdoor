@@ -121,14 +121,7 @@ body {
     color: #555;
 }
 
-.brand-list {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 40px;
-}
-
-.brand-list img {
+.slider img {
     max-width: 100px;
     height: auto;
     opacity: 0.9;
@@ -137,10 +130,34 @@ body {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
 }
 
-.brand-list img:hover {
-    transform: scale(1.1);
-    opacity: 1;
-}
+
+@keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-250px * 10));
+    }
+  }
+  
+  .slider {
+    height: 100px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+  }
+  
+  .slider-track {
+    display: flex;
+    width: calc(250px * 20);
+    animation: scroll 40s linear infinite;
+  }
+  
+  .slide {
+    height: 100px;
+    width: 190px;
+    flex-shrink: 0;
+  }
 
 /* Tentang Kami*/
 
@@ -262,7 +279,7 @@ body {
     background-color:var(--primary);
     color: #fff;
     font-size: 20px;
-    font-weight: 700;
+    font-weight: 600;
     border: none;
     padding: 10px 20px;
     cursor: pointer;
@@ -273,6 +290,50 @@ body {
 
 .tombol button:hover {
     background-color: #296b94;
+}
+
+/* Blog Cards */
+.container {
+    background-color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3rem;
+    padding: 3rem;
+}
+
+.card-blog {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    max-width: 350px;
+    width: 100%;
+    transition: transform 0.3s ease;
+}
+
+.card-blog:hover {
+    transform: translateY(-5px);
+}
+
+.card-blog img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-title {
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.card-blog:hover .card-title {
+    color: #2c8ac4;
 }
 /* Media Queries */
 

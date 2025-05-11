@@ -39,12 +39,23 @@
     <!--Katalog Section-->
     <section class="container">
         <div class="produk">
-            <h1>List Peralatan Cabin <span>Outdoor</span>.</h1>
+            <div class="header-bar">
+                <h1>List Peralatan Cabin <span>Outdoor</span>.</h1>
+                <select id="kategori" onchange="window.location.href=this.value">
+                    <option value="{{ route('produk') }}">Semua Produk</option>
+                    @foreach($kategori as $item)
+                        <option value="{{ route('produk') }}?kategori={{ $item->id_kategori }}"
+                            {{ request()->query('kategori') == $item->id_kategori ? 'selected' : '' }}>
+                            {{ $item->kategori }}
+                        </option>
+                    @endforeach
+                </select>
+            </div>
 
             <div class="grid">
                 @foreach($products as $product)
                     <div class="card">
-                        <img src="img/{{ $product->gambar }}" alt="{{ $product->nama_produk }}">
+                        <img src="{{ asset('/storage/images/' . $product->gambar) }}" alt="{{ $product->nama_produk }}">
                         <h2><strong>{{($product->nama_produk) }}</strong></h2>
                         <h2>Rp. {{ number_format($product->harga)}}</h2>
                         <a href="{{ route('katalog-detail', $product->id_produk) }}">
@@ -74,6 +85,24 @@
             @else
                 <span class="disabled">&raquo;</span>
             @endif
+        </div>
+    </section>
+
+    <section class="paket-container">
+        <div class="paket">
+            <h1>List Paket Cabin <span>Outdoor</span>.</h1>
+                <div class="paket-grid">
+                    @foreach($paket as $bundling)
+                        <div class="paket-card">
+                            <img src="img/paket/{{ $bundling->gambar }}" alt="{{ $bundling->nama_paket }}">
+                            <h2><strong>{{($bundling->nama_paket) }}</strong></h2>
+                            <h2>Rp. {{ number_format($bundling->harga)}}</h2>
+                            <a href="{{ route('paket-detail', $bundling->id_paket) }}">
+                                <button>Detail</button>
+                            </a>
+                        </div>
+                    @endforeach
+                </div>
         </div>
     </section>
 

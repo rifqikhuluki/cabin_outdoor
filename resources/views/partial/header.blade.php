@@ -34,14 +34,12 @@
             <a href="/">Beranda</a>
             <a href="/tentang">Tentang Kami</a>
             <a href="/katalog">Katalog</a>
-            <a href="/sewa">Cara Pesan</a>
+            <a href="/sewa">Cara Sewa</a>
             <a href="/kontak">Kontak & Lokasi</a>
         </div>
 
         <div class="navbar-extra">
-            <a href="#" id="search"><i data-feather="search"></i></a>
-            <a href="#" id="shopping-cart"><i data-feather="shopping-cart"></i></a>
-            <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
+            <a href="#" class="tombol"><button>Hubungi Kami</button></a>
         </div>
      </nav>
 

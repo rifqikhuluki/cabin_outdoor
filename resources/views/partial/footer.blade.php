@@ -33,12 +33,6 @@
             <img src="{{ asset('img/logo.png') }}" alt="logo">
             <h1>Cabin <span>Outdoor</span>.</h1>
         </div>
-
-        <div class="sosials">
-            <a href="#"><i data-feather="instagram"></i></a>
-            <a href="#"><i data-feather="youtube"></i></a>
-            <a href="#"><i data-feather="facebook"></i></a>
-        </div>
         </div>
 
         <div class="garis"></div>
@@ -46,7 +40,8 @@
         <div class="footer-body">
         <div class="Tentang">
             <h3>Tentang Kami</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo aliquid omnis maiores illum eum voluptate, non eos totam commodi! Est reiciendis impedit architecto culpa molestias debitis tenetur, nesciunt mollitia natus?</p>
+            <p>Cabin Outdoor adalah tempat terbaik untuk menikmati liburan di tengah alam terbuka. 
+                Dengan fasilitas yang lengkap, kami menghadirkan pengalaman berlibur yang aman, nyaman, dan seru</p>
         </div>
 
         <div class="links">
@@ -61,7 +56,7 @@
         <div class="contac">
             <h3>Contact Us</h3>
             <a href="#"><i data-feather="phone"></i>081233898</a>
-            <a href="#"><i data-feather="mail"></i>cabinoutdoor@gmail.com</a>
+            <a href="#"><i data-feather="instagram"></i>@cabin.outdoor</a>
             <a href="#"><i data-feather="home"></i>Merjosari</a>
         </div>
         </div>

@@ -67,14 +67,67 @@
     </section>
 
     <section class="our-brand">
-        <div class="container">
+        <div class="brand-container">
             <h2>Our Brand</h2>
             <p>Brand-brand terpercaya dalam dunia petualangan outdoor.</p>
-            <div class="brand-list">
-                <img src="img/brand1.png" alt="northface">
-                <img src="img/brand2.png" alt="REI">
-                <img src="img/brand3.png" alt="Eigeer">
-                <img src="img/brand4.jpeg" alt="Consina">
+            <div class="slider">
+                <div class="slider-track">
+                    <div class="slide">
+                        <img src="{{ asset('img/brand/brand2.png') }}" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="{{ asset('img/brand/brand3.png') }}" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="{{ asset('img/brand/brand4.jpeg') }}" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="{{ asset('img/brand/columbia.jpg') }}" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="{{ asset('img/brand/decatlhon.jpg') }}" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="{{ asset('img/brand/jackwolfskin.png') }}" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="{{ asset('img/brand/lavio.png') }}" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="{{ asset('img/brand/teksta.png') }}" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="{{ asset('img/brand/tendaki.jpg') }}" alt="">
+                    </div>
+
+                    <div class="slide">
+                        <img src="{{ asset('img/brand/brand2.png') }}" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="{{ asset('img/brand/brand3.png') }}" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="{{ asset('img/brand/brand4.jpeg') }}" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="{{ asset('img/brand/columbia.jpg') }}" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="{{ asset('img/brand/decatlhon.jpg') }}" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="{{ asset('img/brand/jackwolfskin.png') }}" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="{{ asset('img/brand/lavio.png') }}" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="{{ asset('img/brand/teksta.png') }}" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="{{ asset('img/brand/tendaki.jpg') }}" alt="">
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -84,13 +137,15 @@
         <div class="tentang-container">
 
             <div class="tentang-img">
-                <img src="img/about.png" alt="tentang kami">
+                <img src="{{ asset('img/cabinabout.jpg') }}" alt="tentang kami">
             </div>
 
             <div class="tentang-text">
                 <h2>Tentang Cabin <span>Outdoor</span>.</h2>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum nisi, assumenda facere commodi vitae aut dolorem sequi autem ullam vel maxime nulla fugit. Ipsa nesciunt odit iusto debitis et asperiores.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero rem assumenda consectetur optio labore voluptates placeat eaque nesciunt consequatur! Libero vitae natus odio rem iste tempore porro eum neque ipsum.</p>
+                <p>Cabin Outdoor adalah tempat terbaik untuk menikmati liburan di tengah alam terbuka. 
+                    Dengan fasilitas yang lengkap, kami menghadirkan pengalaman berlibur yang aman, nyaman, dan seru</p>
+                <p>Dengan nuansa alam yang memikat dan suasana yang menenangkan, Cabin Outdoor menjadi pilihan sempurna untuk beristirahat, bercengkerama, dan menciptakan kenangan tak terlupakan. 
+                    Ayo rencanakan petualangan serumu bersama kami!</p>
             </div>
 
         </div>
@@ -116,6 +171,36 @@
         </a>
         
     </section>
+
+    <!-- Blog Section Start -->
+
+    <section class="container">
+        <div class="card-blog">
+            <a href="{{ route('rekomendasi.blog1') }}">
+                <img src="{{ asset('img/rekomend1.png') }}" alt="Spot Camping">
+                <div class="highlight-bar"></div>
+                <div class="card-title">Camping di Malang-Batu: 4 Spot yang Wajib Masuk Daftar Liburanmu!</div>
+            </a>
+        </div>
+
+        <div class="card-blog">
+            <a href="{{ route('rekomendasi.blog2') }}">
+                <img src="{{ asset('img/rekomend3.png') }}" alt="Bromo Sudut Lain">
+                <div class="highlight-bar"></div>
+                <div class="card-title">Bromo dari Sudut Berbeda: Surga Tersembunyi yang Wajib Kamu Jelajahi!</div>
+            </a>
+            </div>
+
+        <div class="card-blog">
+            <a href="{{ route('rekomendasi.blog3') }}">
+                <img src="{{ asset('img/rekomend2.png') }}" alt="Gunung Populer">
+                <div class="highlight-bar"></div>
+                <div class="card-title">5 Gunung Populer Untuk Hiking: Jalur Menantang dengan Pemandangan Menakjubkan!</div>
+            </a>
+        </div>
+    </section>
+
+<!-- Blog Section End -->
 
     @include('partial/footer')
 
