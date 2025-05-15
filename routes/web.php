@@ -3,6 +3,9 @@
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\KatalogController;
+use App\Http\Controllers\TentangController;
+use App\Http\Controllers\SewaController;
+use App\Http\Controllers\KontakController;
 use App\Http\Controllers\LoginController as AdminLoginController;
 use App\Http\Controllers\DashboardController as AdminDashboardController;
 use App\Http\Controllers\ProductAdminController as AdminProductController;
@@ -14,6 +17,9 @@ use App\Http\Middleware\Loggedin;
 
 use Illuminate\Routing\Route as RoutingRoute;
 
+//public
+
+//beranda
 Route::get('/', function () {
     return view('home');
 });
@@ -44,32 +50,35 @@ Route::get('/blog/3', function () {
     return view('rekomendasi.blog3');
 })->name('rekomendasi.blog3');
 
-Route::get('/tentang', function () {
-    return view('tentang');
-});
+//halaman tentang kami
+Route::get('/tentang', [TentangController::class, 'tentang'])->name('tentang');
 
-Route::get('/sewa', function () {
-    return view('sewa');
-});
+//halaman katalog
+Route::get('/katalog', [KatalogController::class, 'katalog'])->name('katalog');
 
-Route::get('/kontak', function () {
-    return view('kontak');
-});
-
-Route::get('/katalog', [KatalogController::class, 'produk'])->name('produk');
-
-Route::get('/produk/kategori/{id_kategori}', [KatalogController::class, 'produk'])->name('produk/kategori');
+Route::get('/katalog/produk/kategori/{id_kategori}', [KatalogController::class, 'katalog'])->name('katalog.produk.kategori');
 
 Route::get('/katalog/produk/{id_produk}', [KatalogController::class, 'detail'])->name('katalog-detail');
 
 Route::get('/katalog/paket/{id_paket}', [KatalogController::class, 'detailpaket'])->name('paket-detail');
 
+//halaman sewa
+Route::get('/sewa', [SewaController::class, 'sewa'])->name('sewa');
+
+//halaman kontak
+Route::get('/kontak', [KontakController::class, 'kontak'])->name('kontak');
+
+
+//admin
 Route::middleware(LoginCheck::class)->group(function(){
+    //login admin
     Route::get('/admin', [AdminLoginController::class, 'login'])->name('admin.login');
+    //proses validasi login admin
     Route::post('/login/process', [AdminLoginController::class, 'process'])->name('admin.login.process');
 });
 
 Route::middleware(Loggedin::class)->group(function(){
+    //menampilkan dashboard admin
     Route::get('/admin/dashboard', [AdminDashboardController::class, 'dashboard'])->name('admin.dashboard');
 
     //menampilkan list produk
@@ -99,6 +108,7 @@ Route::middleware(Loggedin::class)->group(function(){
     //proses mengahpus data paket
     Route::get('/admin/paket/delete/{id_paket}', [AdminPaketController::class, 'delete'])->name('admin.paket.delete');
 
+    //logout admin
     Route::get('/admin/logout', [AdminLogoutController::class, 'process'])->name('admin.logout');
 });
 

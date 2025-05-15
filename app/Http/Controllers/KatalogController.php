@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 
 class KatalogController extends Controller
 {
-    public function produk(Request $request)
+    public function katalog(Request $request)
     {
         $id_kategori = $request->query('kategori');  // Menangkap kategori dari query string
         

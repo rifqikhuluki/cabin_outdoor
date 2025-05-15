@@ -1,32 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>{{ $product->nama_produk }}</title>
-    
-            <!-- Fonts -->
+@extends('layout.main')
 
-            <link rel="preconnect" href="https://fonts.googleapis.com">
-            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-            <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
-            <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-        
-        
-            <!-- Feather Icons -->
-        
-            <script src="https://unpkg.com/feather-icons"></script>
-        
-            <!-- My JavaScript -->
-             <script src="Cabin-Outdoor/js/script.js"></script>
-        
-            <!-- My Style -->
-            <link rel="stylesheet" href="{{ asset('css/katalog-detail.css') }}">
-</head>
-<body>
-@include('partial/header')
+@push('styles')
+<link rel="stylesheet" href="{{ asset('css/katalog-detail.css') }}">
+@endpush
 
+@section('content')
 <!-- Hero Section Start -->
 <section class="hero" id="home">
     <main class="content">
@@ -38,7 +16,7 @@
         
 <div class="container">
     <div class="left">
-        <img src="{{ asset('img/' . $product->gambar) }}" alt="{{ $product->nama_produk }}" class="main-image">
+        <img src="{{ asset('/storage/images/' . $product->gambar) }}" alt="{{ $product->nama_produk }}" class="main-image">
     </div>
     <div class="right">
         <h2>Spesifikasi</h2>
@@ -48,7 +26,9 @@
         </p>
 
         <ul class="specs">
-            {!! $product->detail_produk !!}
+        @foreach (explode(',', $product->detail_produk) as $detail)
+            <li>{{ trim($detail) }}</li>
+        @endforeach
         </ul>
 
         <div class="price">
@@ -56,13 +36,9 @@
         </div>
 
         <div class="actions">
-            <button class="sewa-btn">Sewa Sekarang</button>
-            <a href="https://wa.me/6287876971615" class="wa-link">+62 878 7697 1615</a>
+            <a href="https://wa.me/6281336038234" class="sewa-btn">Sewa Sekarang</a>
+            <a href="https://wa.me/6281336038234" class="wa-link">081336038234</a>
         </div>
     </div>
 </div>
-
-@include('partial/footer')
-    
-</body>
-</html>
+@endsection

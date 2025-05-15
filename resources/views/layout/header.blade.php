@@ -32,14 +32,14 @@
 
         <div class="navbar-nav">
             <a href="/">Beranda</a>
-            <a href="/tentang">Tentang Kami</a>
-            <a href="/katalog">Katalog</a>
-            <a href="/sewa">Cara Sewa</a>
-            <a href="/kontak">Kontak & Lokasi</a>
+            <a href="{{ route('tentang') }}">Tentang Kami</a>
+            <a href="{{ route('katalog') }}">Katalog</a>
+            <a href="{{ route('sewa') }}">Cara Sewa</a>
+            <a href="{{ route('kontak') }}">Kontak & Lokasi</a>
         </div>
 
         <div class="navbar-extra">
-            <a href="#" class="tombol"><button>Hubungi Kami</button></a>
+            <a href="https://wa.me/6281336038234" class="tombol"><button>Hubungi Kami</button></a>
         </div>
      </nav>
 

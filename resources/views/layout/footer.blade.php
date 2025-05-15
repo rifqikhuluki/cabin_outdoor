@@ -47,17 +47,17 @@
         <div class="links">
             <h3>Link</h3>
             <a href="/">Beranda</a>
-            <a href="/tentang">Tentang Kami</a>
-            <a href="/katalog">Katalog</a>
-            <a href="/sewa">Cara Sewa</a>
-            <a href="/kontak">Kontak & Lokasi</a>
+            <a href="{{ route('tentang') }}">Tentang Kami</a>
+            <a href="{{ route('katalog') }}">Katalog</a>
+            <a href="{{ route('sewa') }}">Cara Sewa</a>
+            <a href="{{ route('kontak') }}">Kontak & Lokasi</a>
         </div>
 
         <div class="contac">
             <h3>Contact Us</h3>
-            <a href="#"><i data-feather="phone"></i>081233898</a>
-            <a href="#"><i data-feather="instagram"></i>@cabin.outdoor</a>
-            <a href="#"><i data-feather="home"></i>Merjosari</a>
+            <a href="https://wa.me/6281336038234"><i data-feather="phone"></i>081233898</a>
+            <a href="https://www.instagram.com/cabin.outdoor?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><i data-feather="instagram"></i>@cabin.outdoor</a>
+            <a href="https://maps.app.goo.gl/ZgZW66kPG79RN7ek9"><i data-feather="home"></i>Merjosari</a>
         </div>
         </div>
 
