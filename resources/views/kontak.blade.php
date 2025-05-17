@@ -18,7 +18,7 @@
 
     <section class="kontak">
         <div class="kontak-container">
-            <div class="kontal-img">
+            <div class="kontak-img">
                 <img src="{{ asset('img/logo.png') }}" alt="logo">
             </div>
             <div class="kontak-text">

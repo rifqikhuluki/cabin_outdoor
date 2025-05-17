@@ -45,7 +45,8 @@ body {
 }
 
 .hero .content h1 {
-    font-size: 2em;
+    font-size: 2rem;
+    font-weight: 700;
     color: #fff;
     text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
     line-height: 1.2;
@@ -68,12 +69,13 @@ body {
     gap: 1rem;
 }
 
-.kontak .kontak-container > div{
+.kontak-container .kontak-img{
     flex: 1;
-}
+} 
 
 .kontak-container .kontak-text{
     color: black;
+    flex: 1;
 } 
 
 .kontak-text h2 {
@@ -90,6 +92,8 @@ body {
 
 .kontak-text h3{
     margin-bottom: 0.5rem;
+    font-size: 1.250rem;
+    font-weight: 700;
 }
 .kontak-text p {
     margin-bottom: 1rem;
@@ -124,43 +128,6 @@ body {
     html {
         font-size: 62.5%;
     }
-
-
-    #hamburger-menu {
-        display: inline-block;
-    }
-
-
-    .navbar .navbar-nav {
-        position: absolute;
-        top: 100%;
-        right: -100%;
-        background-color: #fff;
-        width: 30rem;
-        height: 100vh;
-        transition: 0.3s;
-    }
-
-    .navbar .navbar-nav.active {
-        right: 0;
-    }
-
-    .navbar .navbar-nav a {
-        color: var(--bg);
-        display: block;
-        margin: 1.5rem;
-        padding: 0.5rem;
-        font-size: 2rem;
-    }
-
-    .navbar .navbar-nav a::after {
-        transform-origin: 0 0;
-    }
-
-    .navbar .navbar-nav a:hover::after {
-        transform: scaleX(0.2);
-    }
-
     
 }
 
@@ -168,5 +135,13 @@ body {
 @media (max-width: 450px) {
     html {
         font-size: 55%;
+    }
+
+    .kontak-container{
+        flex-direction: column;
+    }
+
+    .kontak-container .kontak-img{
+        padding-bottom: 3rem;
     }
 }

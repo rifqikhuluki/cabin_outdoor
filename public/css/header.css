@@ -20,7 +20,7 @@ body {
 
 /* Navbar */
 
-.navbar {
+.navbar-custom {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -34,28 +34,30 @@ body {
     z-index: 9999;
 }
 
-.navbar .navbar-logo {
+.navbar-custom .navbar-logo {
+    text-decoration: none;
     font-size: 2rem;
     font-weight: 700;
     color: #fff;
 }
 
-.navbar .navbar-logo span {
+.navbar-custom .navbar-logo span {
     color: var(--primary);
 }
 
-.navbar .navbar-nav a {
+.navbar-custom .navbar-menu a {
     color: #fff;
+    text-decoration: none;
     display: inline-block;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     margin: 0 1rem;
 }
 
-.navbar .navbar-nav a:hover {
+.navbar-custom .navbar-menu a:hover {
     color: var(--primary);
 }
 
-.navbar .navbar-nav a::after {
+.navbar-custom .navbar-menu a::after {
     content: '';
     display: block;
     padding-bottom: 0.5rem;
@@ -64,16 +66,16 @@ body {
     transition: 0.2s linear;
 }
 
-.navbar .navbar-nav a:hover::after {
+.navbar-custom .navbar-menu a:hover::after {
     transform: scaleX(0.5);
 }
 
-.navbar .navbar-extra a {
+.navbar-custom .navbar-wa a {
     color: #fff;
     margin: 0 0.5rem;
 }
 
-.navbar .navbar-extra a:hover {
+.navbar-menu .navbar-wa a:hover {
     color: var(--primary);
 }
 
@@ -81,22 +83,17 @@ body {
     display: none;
 }
 
-.tombol button {
-    align-items: center;
-    background-color:var(--primary);
-    color: #fff;
-    font-size: 20px;
-    font-weight: 700;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 4px;
-    width: 100%;
-    height: 3rem;
+.btn-primary{
+    padding: 1rem 2.5rem;
+    background-color: var(--primary);
+    border-color:  var(--primary);
+    font-weight: 600;
+    font-size: 1rem;
 }
 
-.tombol button:hover {
+.btn-primary:hover{
     background-color: #296b94;
+    border-color:  #296b94;
 }
 
 /* Media Queries */
@@ -106,10 +103,11 @@ body {
     html {
         font-size: 75%;
     }
+
 }
 
 /* Tablet */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     html {
         font-size: 62.5%;
     }
@@ -120,7 +118,7 @@ body {
     }
 
 
-    .navbar .navbar-nav {
+    .navbar-custom .navbar-menu {
         position: absolute;
         top: 100%;
         right: -100%;
@@ -130,11 +128,11 @@ body {
         transition: 0.3s;
     }
 
-    .navbar .navbar-nav.active {
+    .navbar-custom .navbar-menu.active {
         right: 0;
     }
 
-    .navbar .navbar-nav a {
+    .navbar-custom .navbar-menu a {
         color: var(--bg);
         display: block;
         margin: 1.5rem;
@@ -142,11 +140,11 @@ body {
         font-size: 2rem;
     }
 
-    .navbar .navbar-nav a::after {
+    .navbar-custom .navbar-menu a::after {
         transform-origin: 0 0;
     }
 
-    .navbar .navbar-nav a:hover::after {
+    .navbar-custom .navbar-menu a:hover::after {
         transform: scaleX(0.2);
     }
 

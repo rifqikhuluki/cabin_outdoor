@@ -17,47 +17,39 @@
 
     <script src="https://unpkg.com/feather-icons"></script>
 
-    <!-- My JavaScript -->
-     <script src="js/script.js"></script>
-
     <!-- My Style -->
     <link rel="stylesheet" href="{{ asset('css/header.css') }}">
 </head>
 <body>
 
     <!-- Navbar start -->
-    <nav class="navbar">
+    <nav class="navbar-custom">
         <a href="#" class="navbar-logo">Cabin<span> Outdoor</span>.</a>
 
 
-        <div class="navbar-nav">
+        <div class="navbar-menu">
             <a href="/">Beranda</a>
             <a href="{{ route('tentang') }}">Tentang Kami</a>
             <a href="{{ route('katalog') }}">Katalog</a>
             <a href="{{ route('sewa') }}">Cara Sewa</a>
             <a href="{{ route('kontak') }}">Kontak & Lokasi</a>
         </div>
-
-        <div class="navbar-extra">
-            <a href="https://wa.me/6281336038234" class="tombol"><button>Hubungi Kami</button></a>
+        
+        <div class="nav-extra">
+            <a href="https://wa.me/6281336038234" type="button" class="btn btn-primary btn-lg">Hubungi Kami</a>
+            <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
         </div>
+        
      </nav>
 
     <!-- Navbar end -->
 
     <script>
         feather.replace();
-
-        function openPopup() {
-            document.getElementById('popupKatalog').style.display = 'block';
-            }
-
-        function closePopup() {
-            document.getElementById('popupKatalog').style.display = 'none';
-            }
-
-            
     </script>
+
+    <!-- My JavaScript -->
+    <script src="js/script.js"></script>
     
 </body>
 </html>

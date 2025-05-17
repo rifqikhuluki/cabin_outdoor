@@ -19,12 +19,12 @@ body {
 }
 
 /*footer*/
-footer{
+.footer-custom{
     background-color: black;
     padding: 1rem 5rem;
 }
 
-footer .footer-head{
+.footer-custom .footer-head{
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -32,34 +32,24 @@ footer .footer-head{
     padding-bottom: 2rem;
 }
 
-footer .footer-logo{
+.footer-custom .footer-logo{
     display: flex;
     align-items: center;
     float: right;
     gap: 1rem;
-    font-size: large;
 }
 
-footer .footer-logo img{
+.footer-custom .footer-logo img{
     width: 75px;
 }
 
-footer .footer-logo h1{
+.footer-custom .footer-logo h1{
     color: white;
+    font-weight: 700;
 }
 
-footer .footer-logo span{
+.footer-custom .footer-logo span{
     color: var(--primary);
-}
-
-footer .sosials{
-    display: flex;
-    gap: 1rem;
-
-}
-
-footer .sosials a{
-    color: white;
 }
 
 .garis {
@@ -69,43 +59,49 @@ footer .sosials a{
     margin: 0 auto;
 }
 
-footer .footer-body{
+.footer-custom .footer-body{
     display: flex;
     padding-top: 3rem;
 }
-footer .footer-body > div{
+.footer-custom .footer-body > div{
     flex: 1;
     padding-right: 2rem;
 }
 
-footer .links a{
-    color: white;
-    display: flex;
+.footer-custom .footer-body h3{
+    font-weight: 600;
 }
 
-footer .contac a{
+.footer-custom .links a{
+    color: white;
+    display: flex;
+    text-decoration: none;
+}
+
+.footer-custom .contac a{
     color: white;
     display: flex;
     padding-top: 3px;
     padding-bottom: 3px;
     gap: 1rem;
+    text-decoration: none;
 }
-footer .credit{
+.footer-custom .credit{
     text-align: center;
     padding-top: 3rem;
 }
 
-footer .sosials a:hover{
+.footer-custom .sosials a:hover{
     color :var(--primary);
     transition-duration: 300ms;
 }
 
-footer .links a:hover{
+.footer-custom .links a:hover{
     color: var(--primary);
     transition-duration: 300ms;
 }
 
-footer .contac a:hover{
+.footer-custom .contac a:hover{
     color: var(--primary);
     transition-duration: 300ms;
 }
@@ -119,7 +115,7 @@ footer .contac a:hover{
 }
 
 /* Tablet */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     html {
         font-size: 62.5%;
     }
@@ -130,7 +126,7 @@ footer .contac a:hover{
     }
 
 
-    .navbar .navbar-nav {
+    .navbar-custom .navbar-menu {
         position: absolute;
         top: 100%;
         right: -100%;
@@ -140,11 +136,11 @@ footer .contac a:hover{
         transition: 0.3s;
     }
 
-    .navbar .navbar-nav.active {
+    .navbar-custom .navbar-menu.active {
         right: 0;
     }
 
-    .navbar .navbar-nav a {
+    .navbar-custom .navbar-menu a {
         color: var(--bg);
         display: block;
         margin: 1.5rem;
@@ -152,11 +148,11 @@ footer .contac a:hover{
         font-size: 2rem;
     }
 
-    .navbar .navbar-nav a::after {
+    .navbar-custom .navbar-menu a::after {
         transform-origin: 0 0;
     }
 
-    .navbar .navbar-nav a:hover::after {
+    .navbar-custom .navbar-menu a:hover::after {
         transform: scaleX(0.2);
     }
 
@@ -168,6 +164,9 @@ footer .contac a:hover{
     html {
         font-size: 55%;
     }
+
+    .footer-custom .footer-body{
+        display: none;
+        padding: 1rem 1rem;
+    }
 }
-
-

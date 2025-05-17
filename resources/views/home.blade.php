@@ -10,7 +10,7 @@
         <main class="content">
             <h1>Mari Melangkah Dengan Cabin</h1>
             <p>Temani langkahmu menjelajahi alam bersama perlengkapan terbaik dari Cabin Outdoor.</p>
-            <a href="#" class="cta">Sewa Sekarang</a>
+            <a href="https://wa.me/6281336038234" type="button" class="btn btn-primary btn-lg">Sewa Sekarang</a>
         </main>
     </section>
     <!-- Hero Section End-->
@@ -145,14 +145,15 @@
             @endforeach
         </div>
 
-        <a href="/katalog" class="tombol"> <button>Lihat peralatan lainya</button>
-        </a>
+        <div class="d-grid gap-2">
+            <a href="{{ route('katalog') }}" class="btn btn-primary" type="button">Lihat peralatan lainya</a>
+        </div>
         
     </section>
 
     <!-- Blog Section Start -->
 
-    <section class="container">
+    <section class="container-blog">
         <div class="card-blog">
             <a href="{{ route('rekomendasi.blog1') }}">
                 <img src="{{ asset('img/rekomend1.png') }}" alt="Spot Camping">

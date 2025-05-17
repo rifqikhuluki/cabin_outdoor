@@ -40,6 +40,7 @@
   
   .hero .content h1 {
     font-size: 2.5rem;
+    font-weight: 700;
     color: #fff;
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
   }
@@ -81,6 +82,7 @@
   
   .tentang-text h2 {
     font-size: 2rem;
+    font-weight: 700;
     margin-bottom: 1rem;
   }
   
@@ -94,7 +96,7 @@
     line-height: 1.5;
   }
 
-  .container {
+  .container-swipper {
     background-color: #f8f9fa;
     display: flex;
     justify-content: center;
@@ -176,6 +178,11 @@
   @media (max-width: 768px) {
     .tentang-container {
       flex-direction: column;
+      padding: 1rem 3rem;
+    }
+
+    .swiper-pagination{
+    transform: translatey(200%);
     }
   
     .hero .content h1 {

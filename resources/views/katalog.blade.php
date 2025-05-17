@@ -16,7 +16,7 @@
     <!-- Hero Section End -->
 
     <!--Katalog Section-->
-    <section class="container">
+    <section class="container-katalog">
         <div class="produk">
             <div class="header-bar">
                 <h1>List Peralatan Cabin <span>Outdoor</span>.</h1>
@@ -73,7 +73,7 @@
                 <div class="paket-grid">
                     @foreach($paket as $bundling)
                         <div class="paket-card">
-                            <img src="img/paket/{{ $bundling->gambar }}" alt="{{ $bundling->nama_paket }}">
+                            <img src="{{ asset('/storage/images/' . $bundling->gambar) }}" alt="{{ $bundling->nama_paket }}" alt="{{ $bundling->nama_paket }}">
                             <h2><strong>{{($bundling->nama_paket) }}</strong></h2>
                             <h2>Rp. {{ number_format($bundling->harga)}}</h2>
                             <a href="{{ route('paket-detail', $bundling->id_paket) }}">

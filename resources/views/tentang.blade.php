@@ -27,7 +27,7 @@
         </div>
     </section>
 
-    <div class="container">
+    <div class="container-swipper">
         <div class="swiper-container-wrapper">
             <div class="swiper">
                 <div class="swiper-wrapper">

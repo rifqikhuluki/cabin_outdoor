@@ -19,14 +19,11 @@
 
     <!-- My Style -->
     <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
-
-    <!-- My JavaScript -->
-    <script src="js/script.js"></script>
 </head>
 <body>
     
     <!--Footer-->
-    <footer class="footer">
+    <footer class="footer-custom">
 
         <div class="footer-head">
         <div class="footer-logo">
@@ -67,17 +64,7 @@
     </footer>
 
     <script>
-        feather.replace();
-
-        function openPopup() {
-            document.getElementById('popupKatalog').style.display = 'block';
-            }
-
-        function closePopup() {
-            document.getElementById('popupKatalog').style.display = 'none';
-            }
-
-            
+        feather.replace();            
     </script>
 
 </body>
