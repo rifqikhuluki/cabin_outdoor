@@ -42,7 +42,14 @@
                     </div>
                     <div class="mb-3">
                       <label for="exampleInputPassword1" class="form-label">Kategori</label>
-                      <input type="number" name="id_kategori" required class="form-control" id="exampleInputPassword1" placeholder="Pilih Kategori">
+                      <select type="number" name="id_kategori" required class="form-control" id="exampleInputPassword1">
+                        <option value="" disabled selected hidden>Pilih Kategori</option>
+                        <option value="1">Tas</option>
+                        <option value="2">Tenda</option>
+                        <option value="3">Sepatu</option>
+                        <option value="4">Pakaian</option>
+                        <option value="5">Lainnya</option>
+                      </select>
                     </div>
                     <div class="mb-3">
                         <label for="exampleInputPassword1" class="form-label">Harga</label>
@@ -54,7 +61,7 @@
                     </div>
                     <div class="mb-3">
                         <label for="exampleInputPassword1" class="form-label">Detail</label>
-                        <input type="text" name="detail_produk" required class="form-control" id="exampleInputPassword1" placeholder="Masukkan Detail Produk">
+                        <input type="text" name="detail_produk" required class="form-control" id="exampleInputPassword1" placeholder="Masukkan Detail Produk | Beri tanda koma untuk detail">
                     </div>
                     <div class="mb-3">
                       <label for="exampleInputPassword1" class="form-label">Upload Gambar</label>

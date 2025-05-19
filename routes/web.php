@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\BerandaController;
 use App\Http\Controllers\KatalogController;
 use App\Http\Controllers\TentangController;
 use App\Http\Controllers\SewaController;
@@ -20,35 +21,16 @@ use Illuminate\Routing\Route as RoutingRoute;
 //public
 
 //beranda
-Route::get('/', function () {
-    return view('home');
-});
+Route::get('/', [BerandaController::class, 'beranda'])->name('beranda');
 
-Route::get('/', [KatalogController::class, 'home'])->name('unggulan');
+//halaman blog1
+Route::get('/blog/1', [BerandaController::class, 'blog1'])->name('rekomendasi.blog1');
 
-Route::get('/blog1', function () {
-    return view('rekomendasi.blog1');
-})->name('rekomendasi.blog1');
+//halaman blog2
+Route::get('/blog/2', [BerandaController::class, 'blog2'])->name('rekomendasi.blog2');
 
-Route::get('/blog2', function () {
-    return view('rekomendasi.blog2');
-})->name('rekomendasi.blog2');
-
-Route::get('/blog3', function () {
-    return view('rekomendasi.blog3');
-})->name('rekomendasi.blog3');
-
-Route::get('/blog/1', function () {
-    return view('rekomendasi.blog1');
-})->name('rekomendasi.blog1');
-
-Route::get('/blog/2', function () {
-    return view('rekomendasi.blog2');
-})->name('rekomendasi.blog2');
-
-Route::get('/blog/3', function () {
-    return view('rekomendasi.blog3');
-})->name('rekomendasi.blog3');
+//halaman blog3
+Route::get('/blog/3', [BerandaController::class, 'blog3'])->name('rekomendasi.blog3');
 
 //halaman tentang kami
 Route::get('/tentang', [TentangController::class, 'tentang'])->name('tentang');
@@ -56,10 +38,10 @@ Route::get('/tentang', [TentangController::class, 'tentang'])->name('tentang');
 //halaman katalog
 Route::get('/katalog', [KatalogController::class, 'katalog'])->name('katalog');
 
-Route::get('/katalog/produk/kategori/{id_kategori}', [KatalogController::class, 'katalog'])->name('katalog.produk.kategori');
-
+//halaman produk detail
 Route::get('/katalog/produk/{id_produk}', [KatalogController::class, 'detail'])->name('katalog-detail');
 
+//halaman paket detail
 Route::get('/katalog/paket/{id_paket}', [KatalogController::class, 'detailpaket'])->name('paket-detail');
 
 //halaman sewa

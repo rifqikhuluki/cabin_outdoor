@@ -5,7 +5,7 @@
 @endpush
 
 @section('content')
-<!-- Hero Section Start -->
+    <!-- Hero Section Start -->
     <section class="hero" id="home">
         <main class="content">
             <h1>Mari Melangkah Dengan Cabin</h1>
@@ -13,38 +13,39 @@
             <a href="https://wa.me/6281336038234" type="button" class="btn btn-primary btn-lg">Sewa Sekarang</a>
         </main>
     </section>
-    <!-- Hero Section End-->
 
+    <!-- Keunggulan -->
     <section class="keunggulan">
-    <div class="keunggulan-1">
-        <div class="img1">
-            <a href="#"><i data-feather="award" class="kualitas"></i></a>
+        <div class="keunggulan-1">
+            <div class="img1">
+                <a href="#"><i data-feather="award" class="kualitas"></i></a>
+            </div>
+            <div class="text1">
+                <h1>Kualitas Terbaik</h1>
+            </div>
         </div>
-        <div class="text1">
-            <h1>Kualitas Terbaik</h1>
-        </div>
-    </div>
 
-    <div class="keunggulan-2">
-        <div class="img2">
-            <a href="#"><i data-feather="tag" class="pilihan"></i></a>
+        <div class="keunggulan-2">
+            <div class="img2">
+                <a href="#"><i data-feather="tag" class="pilihan"></i></a>
+            </div>
+            <div class="text2">
+                <h1>Banyak Pilihan</h1>
+            </div>
         </div>
-        <div class="text2">
-            <h1>Banyak Pilihan</h1>
-        </div>
-    </div>
 
-    <div class="keunggulan-3">
-        <div class="img3">
-            <a href="#"><i data-feather="dollar-sign" class="uang"></i></a>
+        <div class="keunggulan-3">
+            <div class="img3">
+                <a href="#"><i data-feather="dollar-sign" class="uang"></i></a>
+            </div>
+            <div class="text3">
+                <h1>Harga Bersahabat</h1>
+            </div>
         </div>
-        <div class="text3">
-            <h1>Harga Bersahabat</h1>
-        </div>
-    </div>
     </section>
 
-    <section class="our-brand">
+    <!-- Brand section -->
+    <section class="brand">
         <div class="brand-container">
             <h2>Our Brand</h2>
             <p>Brand-brand terpercaya dalam dunia petualangan outdoor.</p>
@@ -113,7 +114,6 @@
     <!--Tentang Kami Section-->
     <section class="tentang">
         <div class="tentang-container">
-
             <div class="tentang-img">
                 <img src="{{ asset('img/cabinabout.jpg') }}" alt="tentang kami">
             </div>
@@ -125,11 +125,11 @@
                 <p>Dengan nuansa alam yang memikat dan suasana yang menenangkan, Cabin Outdoor menjadi pilihan sempurna untuk beristirahat, bercengkerama, dan menciptakan kenangan tak terlupakan. 
                     Ayo rencanakan petualangan serumu bersama kami!</p>
             </div>
-
         </div>
     </section>
 
-    <section class="unggulan">
+    <!-- Produk Section -->
+    <section class="produk">
         <h2>Produk Cabin Outdoor</h2>
         <p>Sewa peralatan outdoor terbaik untuk petualanganmu!</p>
         <div class="grid">
@@ -151,8 +151,7 @@
         
     </section>
 
-    <!-- Blog Section Start -->
-
+    <!-- Blog Section -->
     <section class="container-blog">
         <div class="card-blog">
             <a href="{{ route('rekomendasi.blog1') }}">
@@ -168,7 +167,7 @@
                 <div class="highlight-bar"></div>
                 <div class="card-title">Bromo dari Sudut Berbeda: Surga Tersembunyi yang Wajib Kamu Jelajahi!</div>
             </a>
-            </div>
+        </div>
 
         <div class="card-blog">
             <a href="{{ route('rekomendasi.blog3') }}">
@@ -178,6 +177,4 @@
             </a>
         </div>
     </section>
-
-<!-- Blog Section End -->
 @endsection

@@ -51,13 +51,12 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach ($dataPaket as $key => $row)
+                        @foreach ($dataPaket as $row)
                         <tr>
-                            <td>{{ ++$key }}.</td>
+                            <td>{{ $row->id_paket }}</td>
                             <td>
                                 <img src="{{ asset('/storage/images/' . $row->gambar) }}" alt="foto produk" width="200px">
                             </td>
-                            <td>{{ $row->id_paket }}</td>
                             <td>{{ $row->nama_paket }}</td>
                             <td>{{ $row->harga }}</td>
                             <td>{{ $row->deskripsi_paket }}</td>
@@ -82,15 +81,6 @@
                     </table>
                 </div>
                 <!-- /.card-body -->
-                <div class="card-footer clearfix">
-                    <ul class="pagination pagination-sm m-0 float-end">
-                    <li class="page-item"><a class="page-link" href="#">&laquo;</a></li>
-                    <li class="page-item"><a class="page-link" href="#">1</a></li>
-                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                    <li class="page-item"><a class="page-link" href="#">&raquo;</a></li>
-                    </ul>
-                </div>
                 </div>
         <!--end::Container-->
         </div>

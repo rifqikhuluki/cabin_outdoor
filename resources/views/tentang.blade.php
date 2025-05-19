@@ -11,7 +11,6 @@
             <h1>Tentang Cabin <span>Outdoor</span>.</h1>
         </main>
     </section>
-    <!-- Hero Section End -->
 
     <!--Tentang Kami Section-->
     <section class="tentang">
@@ -27,6 +26,7 @@
         </div>
     </section>
 
+    <!-- Img Swipper -->
     <div class="container-swipper">
         <div class="swiper-container-wrapper">
             <div class="swiper">
@@ -64,10 +64,10 @@
                 </div>
             </div>
     
-            <!-- If we need pagination -->
+            <!--paginasi swipper -->
             <div class="swiper-pagination"></div>
-    
-            <!-- If we need navigation buttons -->
+
+            <!-- Tombol Kanan kiri swipper -->
             <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div>
         </div>

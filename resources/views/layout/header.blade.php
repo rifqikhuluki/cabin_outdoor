@@ -24,11 +24,11 @@
 
     <!-- Navbar start -->
     <nav class="navbar-custom">
-        <a href="#" class="navbar-logo">Cabin<span> Outdoor</span>.</a>
+        <a class="navbar-logo">Cabin<span> Outdoor</span>.</a>
 
 
         <div class="navbar-menu">
-            <a href="/">Beranda</a>
+            <a href="{{ route('beranda') }}">Beranda</a>
             <a href="{{ route('tentang') }}">Tentang Kami</a>
             <a href="{{ route('katalog') }}">Katalog</a>
             <a href="{{ route('sewa') }}">Cara Sewa</a>
@@ -42,14 +42,12 @@
         
      </nav>
 
-    <!-- Navbar end -->
-
     <script>
         feather.replace();
     </script>
 
     <!-- My JavaScript -->
-    <script src="js/script.js"></script>
+    <script src="{{ asset('js/script.js') }}"></script>
     
 </body>
 </html>

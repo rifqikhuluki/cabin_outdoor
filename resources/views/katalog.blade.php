@@ -5,32 +5,41 @@
 @endpush
 
 @section('content')
-
  <!-- Hero Section Start -->
     <section class="hero" id="home">
         <main class="content">
             <h1>Katalog Cabin <span>Outdoor</span>.</h1>
         </main>
     </section>
-
-    <!-- Hero Section End -->
-
+    
     <!--Katalog Section-->
     <section class="container-katalog">
+
+        <!-- Produk Section -->
         <div class="produk">
             <div class="header-bar">
                 <h1>List Peralatan Cabin <span>Outdoor</span>.</h1>
-                <select id="kategori" onchange="window.location.href=this.value">
-                    <option value="{{ route('katalog') }}">Semua Produk</option>
-                    @foreach($kategori as $item)
-                        <option value="{{ route('katalog') }}?kategori={{ $item->id_kategori }}"
-                            {{ request()->query('kategori') == $item->id_kategori ? 'selected' : '' }}>
-                            {{ $item->kategori }}
-                        </option>
-                    @endforeach
-                </select>
-            </div>
 
+                <!-- Kategori -->
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Kategori
+                    </button>
+                    <ul class="dropdown-menu">
+                        @foreach($kategori as $categories)
+                        <li>
+                            <a class="dropdown-item" href="{{ route('katalog', ['kategori' => $categories->id_kategori]) }}">
+                            {{ $categories->kategori }}
+                            </a>
+                        </li>
+                        @endforeach
+                        <ul class="dropdown-divider"></ul>
+                        <a class="dropdown-item" href="{{ route('katalog') }}">Semua kategori</a>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Produk Card -->
             <div class="grid">
                 @foreach($products as $product)
                     <div class="card">
@@ -43,33 +52,21 @@
                     </div>
                 @endforeach
             </div>
-
-        <div class="pagination">
-            @if ($products->onFirstPage())
-                <span class="disabled">&laquo;</span>
-            @else
-                <a href="{{ $products->previousPageUrl() }}">&laquo;</a>
-            @endif
-
-            @foreach ($products->getUrlRange(1, $products->lastPage()) as $page => $url)
-                @if ($page == $products->currentPage())
-                    <span class="active">{{ $page }}</span>
-                @else
-                    <a href="{{ $url }}">{{ $page }}</a>
-                @endif
-            @endforeach
-
-            @if ($products->hasMorePages())
-                <a href="{{ $products->nextPageUrl() }}">&raquo;</a>
-            @else
-                <span class="disabled">&raquo;</span>
-            @endif
+        
+        <!-- paginasi -->
+        <div class="row">
+            <div class="col flex-wrap">
+                {{ $products->links() }}
+            </div>
         </div>
     </section>
 
+    <!-- Paket Section -->
     <section class="paket-container">
         <div class="paket">
             <h1>List Paket Cabin <span>Outdoor</span>.</h1>
+            
+            <!-- Paket card -->
                 <div class="paket-grid">
                     @foreach($paket as $bundling)
                         <div class="paket-card">
@@ -84,5 +81,4 @@
                 </div>
         </div>
     </section>
-
 @endsection

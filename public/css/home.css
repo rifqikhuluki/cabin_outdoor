@@ -18,6 +18,7 @@ body {
     color: #fff;
     min-height: 2000px;
 }
+
 /* hero section */
 .hero {
     min-height: 100vh;
@@ -80,6 +81,7 @@ body {
     border-color:  #296b94;
 }
 
+/* Keungggulan */
 .keunggulan {
     display: flex;
     justify-content: center;
@@ -108,20 +110,21 @@ body {
     font-weight: 700;
 }
 
-.our-brand {
+/* Brand */
+.brand {
     padding: 50px 0;
     background-color: #f8f9fa;
     text-align: center;
 }
 
-.our-brand h2 {
+.brand h2 {
     font-size: 32px;
     font-weight: 700;
     margin-bottom: 10px;
     color: #2b3d52;
 }
 
-.our-brand p {
+.brand p {
     font-size: 16px;
     margin-bottom: 30px;
     color: #555;
@@ -166,55 +169,55 @@ body {
   }
 
 /* Tentang Kami*/
-
-  .tentang {
+.tentang {
     margin: 0 auto;
     background-color: #fff;
     padding: 6rem 1rem;
     color: #111;
-  }
-  
-  .tentang-container {
+}
+
+.tentang-container {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     gap: 4rem;
     max-width: 1200px;
     margin: auto;
-  }
-  
-  .tentang-img {
+}
+
+.tentang-img {
     flex: 1;
     text-align: center;
-  }
-  
-  .tentang-img img {
+}
+
+.tentang-img img {
     max-width: 100%;
     border-radius: 10px;
     box-shadow: -10px 10px 0px rgba(185, 185, 187, 0.8);
-  }
-  
-  .tentang-text {
+}
+
+.tentang-text {
     flex: 1;
-  }
-  
-  .tentang-text h2 {
+}
+
+.tentang-text h2 {
     font-size: 2rem;
     font-weight: 700;
     margin-bottom: 1rem;
-  }
-  
-  .tentang-text h2 span {
+}
+
+.tentang-text h2 span {
     color: var(--primary);
-  }
-  
-  .tentang-text p {
+}
+
+.tentang-text p {
     margin-bottom: 1rem;
     font-size: 1rem;
     line-height: 1.5;
-  }
+}
 
-.unggulan{
+/* Produk Section */
+.produk{
     margin: 0 auto;
     color: #0f0101;
     background-color: #f8f9fa;
@@ -222,14 +225,14 @@ body {
     text-align: center;
 }
 
-.unggulan h2 {
+.produk h2 {
     font-size: 32px;
     font-weight: 700;
     margin-bottom: 10px;
     color: #2b3d52;
 }
 
-.unggulan p {
+.produk p {
     font-size: 16px;
     margin-bottom: 30px;
     color: #555;
@@ -298,7 +301,7 @@ body {
     background-color: #296b94;
 }
 
-/* Blog Cards */
+/* Blog Section */
 .container-blog {
     background-color: #fff;
     display: flex;
@@ -349,23 +352,25 @@ body {
 }
 /* Media Queries */
 
-/* Laptop */
-@media (max-width: 1366px) {
-    html {
-        font-size: 75%;
-    }
-}
-
 /* Tablet */
-@media (max-width:  900px) {
+@media (max-width: 1024px) and (min-width: 769px) {
     html {
         font-size: 60%;
     }
-
+    .tentang-container {
+        flex-direction: column;
+        padding: 1rem 3rem;
+    }
+    .tentang-text h2 {
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        text-align: center;
+    }
 }
 
 /* Mobile Phone */
-@media (max-width: 450px) {
+@media (max-width: 768px) {
     html {
         font-size: 30%;
     }
@@ -393,5 +398,11 @@ body {
     .tentang-container {
       flex-direction: column;
       padding: 1rem 3rem;
+    }
+    .tentang-text h2 {
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        text-align: center;
     }
 }

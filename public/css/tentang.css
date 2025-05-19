@@ -1,181 +1,197 @@
 :root {
-    --primary: #2c8ac4;
-    --bg: #0f0101;
-  }
+  --primary: #2c8ac4;
+  --bg: #0f0101;
+}
 
-  body {
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
-    background-color: var(--bg);
-    color: #fff;
-    overflow-x: hidden;
-  }
-  
-  /* Hero Section */
-  .hero {
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-image: url('../img/ranukumbolo.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    position: relative;
-  }
-  
-  .hero::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(0deg, #ffffff 3%, rgba(255, 255, 255, 0) 25%);
-    z-index: 1;
-  }
-  
-  .hero .content {
-    position: relative;
-    text-align: center;
-    z-index: 2;
-  }
-  
-  .hero .content h1 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: #fff;
-    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
-  }
-  
-  .hero .content h1 span {
-    color: var(--primary);
-  }
-  
-  /* Tentang Kami */
-  .tentang {
-    background-color: #fff;
-    padding: 6rem 1rem;
-    color: #111;
-  }
-  
-  .tentang-container {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 4rem;
-    max-width: 1200px;
-    margin: auto;
-  }
-  
-  .tentang-img {
-    flex: 1;
-    text-align: center;
-  }
-  
-  .tentang-img img {
-    max-width: 100%;
-    border-radius: 10px;
-    box-shadow: -10px 10px 0px rgba(185, 185, 187, 0.8);
-  }
-  
-  .tentang-text {
-    flex: 1;
-  }
-  
-  .tentang-text h2 {
-    font-size: 2rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-  }
-  
-  .tentang-text h2 span {
-    color: var(--primary);
-  }
-  
-  .tentang-text p {
-    margin-bottom: 1rem;
-    font-size: 1rem;
-    line-height: 1.5;
-  }
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--bg);
+  color: #fff;
+  overflow-x: hidden;
+}
 
-  .container-swipper {
-    background-color: #f8f9fa;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: auto;
-    padding: 40px 10px; /* Tambahkan ruang di kiri & kanan untuk tombol */
+/* Hero Section */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('../img/ranukumbolo.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg, #ffffff 3%, rgba(255, 255, 255, 0) 25%);
+  z-index: 1;
+}
+
+.hero .content {
+  position: relative;
+  text-align: center;
+  z-index: 2;
+}
+
+.hero .content h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+.hero .content h1 span {
+  color: var(--primary);
+}
+
+/* Tentang Kami */
+.tentang {
+  background-color: #fff;
+  padding: 6rem 1rem;
+  color: #111;
+}
+
+.tentang-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.tentang-img {
+  flex: 1;
+  text-align: center;
+}
+
+.tentang-img img {
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: -10px 10px 0px rgba(185, 185, 187, 0.8);
+}
+
+.tentang-text {
+  flex: 1;
+}
+
+.tentang-text h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.tentang-text h2 span {
+  color: var(--primary);
+}
+
+.tentang-text p {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Img Swipper */
+.container-swipper {
+  background-color: #f8f9fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: auto;
+  padding: 40px 10px;
 }
 
 .swiper-container-wrapper {
-    position: relative;
-    width: 100%;
-    max-width: 800px;
+  position: relative;
+  width: 100%;
+  max-width: 800px;
 }
 
 .swiper {
-    width: 90%;
-    position: relative;
-    overflow: hidden;
+  width: 90%;
+  position: relative;
+  overflow: hidden;
 }
 
 .img-wrapper {
-    width: 100%;
-    position: relative;
-    padding-top: 56.25%;
+  width: 100%;
+  position: relative;
+  padding-top: 56.25%;
 }
 
 .img-wrapper img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center top;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
 }
 
-/* Tombol */
 .swiper-button-prev,
 .swiper-button-next {
-    color: rgb(255, 255, 255); /* Warna teks atau ikon tombol */
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 10;
-    width: 40px; /* Ukuran tombol */
-    height: 40px; /* Ukuran tombol */
-    background-color: var(--primary); /* Latar belakang putih */
-    border-radius: 50%; /* Membuat tombol bulat */
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  color: rgb(255, 255, 255);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  width: 40px; 
+  height: 40px;
+  background-color: var(--primary); 
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-/* Geser tombol ke luar gambar */
 .swiper-button-prev {
-    left: -80px;
+  left: -80px;
 }
 
 .swiper-button-next {
-    right: -80px;
+  right: -80px;
 }
 
 .swiper-button-prev::after,
 .swiper-button-next::after {
-    font-size: 20px;
+  font-size: 20px;
 }
 
 .swiper-pagination {
-    position: absolute;
-    bottom: -30px;
-    left: 50%;
-    transform: translatey(140%);
-    z-index: 5;
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translatey(140%);
+  z-index: 5;
+}
+  
+/* Media Queries */
+
+/* Tablet */
+@media (max-width: 1024px) and (min-width: 769px) {
+    html {
+        font-size: 60%;
+    }
+     .tentang-container {
+      padding: 1rem 3rem;
+    }
+    .swiper-pagination{
+    transform: translatey(200%);
+    }
 }
 
+/* Mobile Phone */
+@media (max-width: 768px) {
+    html {
+        font-size: 30%;
+    }
 
-  
-  /* Responsive */
-  @media (max-width: 768px) {
     .tentang-container {
       flex-direction: column;
       padding: 1rem 3rem;
@@ -188,5 +204,4 @@
     .hero .content h1 {
       font-size: 2rem;
     }
-  }
-  
+}

@@ -19,7 +19,6 @@ body {
 }
 
 /* Navbar */
-
 .navbar-custom {
     display: flex;
     justify-content: space-between;
@@ -70,12 +69,12 @@ body {
     transform: scaleX(0.5);
 }
 
-.navbar-custom .navbar-wa a {
+.navbar-custom .nav-extra a {
     color: #fff;
     margin: 0 0.5rem;
 }
 
-.navbar-menu .navbar-wa a:hover {
+.navbar-menu .nav-extra a:hover {
     color: var(--primary);
 }
 
@@ -98,16 +97,8 @@ body {
 
 /* Media Queries */
 
-/* Laptop */
-@media (max-width: 1366px) {
-    html {
-        font-size: 75%;
-    }
-
-}
-
 /* Tablet */
-@media (max-width: 900px) {
+@media (max-width: 1024px) and (min-width: 769px) {
     html {
         font-size: 62.5%;
     }
@@ -152,9 +143,44 @@ body {
 }
 
 /* Mobile Phone */
-@media (max-width: 450px) {
+@media (max-width: 768px) {
     html {
         font-size: 55%;
+    }
+
+    #hamburger-menu {
+        display: inline-block;
+    }
+
+
+    .navbar-custom .navbar-menu {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        background-color: #fff;
+        width: 30rem;
+        height: 100vh;
+        transition: 0.3s;
+    }
+
+    .navbar-custom .navbar-menu.active {
+        right: 0;
+    }
+
+    .navbar-custom .navbar-menu a {
+        color: var(--bg);
+        display: block;
+        margin: 1.5rem;
+        padding: 0.5rem;
+        font-size: 2rem;
+    }
+
+    .navbar-custom .navbar-menu a::after {
+        transform-origin: 0 0;
+    }
+
+    .navbar-custom .navbar-menu a:hover::after {
+        transform: scaleX(0.2);
     }
 }
 

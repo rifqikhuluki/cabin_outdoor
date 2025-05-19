@@ -56,6 +56,7 @@ body {
     color: var(--primary);
 }
 
+/* Kontak */
 .kontak{
     background-color: #fff;
     font-family: 'Poppins', sans-serif;
@@ -95,9 +96,11 @@ body {
     font-size: 1.250rem;
     font-weight: 700;
 }
-.kontak-text p {
-    margin-bottom: 1rem;
+.kontak-text a {
     font-size: 1rem;
+    color: #0f0101;
+    text-decoration: none;
+    padding-bottom: 1rem;
 }
 
 .kontak-text iframe{
@@ -116,32 +119,39 @@ body {
 
 /* Media Queries */
 
-/* Laptop */
-@media (max-width: 1366px) {
-    html {
-        font-size: 75%;
-    }
-}
-
 /* Tablet */
-@media (max-width: 768px) {
+@media (max-width: 1024px) and (min-width: 769px){
     html {
         font-size: 62.5%;
+    }
+    .kontak .kontak-container{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+    }
+    .kontak-img img{
+        display: flex;
+        width: 80%;
     }
     
 }
 
 /* Mobile Phone */
-@media (max-width: 450px) {
+@media (max-width: 768px) {
     html {
         font-size: 55%;
     }
-
-    .kontak-container{
+    .kontak-container {
+        display: flex;
         flex-direction: column;
+        align-items: center;
     }
-
     .kontak-container .kontak-img{
-        padding-bottom: 3rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 2rem;
     }
 }

@@ -37,8 +37,8 @@
                     </div>
                 </div>
                 <!-- /.card-header -->
-                <div class="card-body">
-                    <table class="table table-bordered">
+                <div class="table-responsive">
+                    <table class="table font-md-small table-bordered" >
                     <thead>
                         <tr>
                         <th style="width: 10px">id</th>
@@ -52,11 +52,14 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach ($dataProduk as $key => $row)
-                        <tr>
-                            <td>{{ ++$key }}.</td>
+                        @foreach ($dataProduk as $row)
+                        <tr >
+                            <td>{{ $row->id_produk }}.</td>
                             <td>
-                                <img src="{{ asset('/storage/images/' . $row->gambar) }}" alt="foto produk" width="200px">
+                                <img src="{{ asset('/storage/images/' . $row->gambar) }}" 
+                                    alt="foto produk"
+                                    class="img-fluid d-block mx-auto"
+                                    style="max-width: 200px; width: 100%;">
                             </td>
                             <td>{{ $row->id_kategori }}</td>
                             <td>{{ $row->nama_produk }}</td>
@@ -81,17 +84,6 @@
                         @endforeach
                     </tbody>
                     </table>
-                </div>
-                <!-- /.card-body -->
-                <div class="card-footer clearfix">
-                    <ul class="pagination pagination-sm m-0 float-end">
-                    <li class="page-item"><a class="page-link" href="#">&laquo;</a></li>
-                    <li class="page-item"><a class="page-link" href="#">1</a></li>
-                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                    <li class="page-item"><a class="page-link" href="#">&raquo;</a></li>
-                    </ul>
-                </div>
                 </div>
         <!--end::Container-->
         </div>

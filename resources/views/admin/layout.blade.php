@@ -3,7 +3,7 @@
   <!--begin::Head-->
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>AdminLTE v4 | Dashboard</title>
+    <title>Admin</title>
     <!--begin::Primary Meta Tags-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="title" content="AdminLTE v4 | Dashboard" />
@@ -41,7 +41,7 @@
     />
     <!--end::Third Party Plugin(Bootstrap Icons)-->
     <!--begin::Required Plugin(AdminLTE)-->
-    <link rel="stylesheet" href="/adminLTE/css/adminlte.css" />
+    <link rel="stylesheet" href="{{ asset('/adminLTE/css/adminlte.css') }}" />
     <!--end::Required Plugin(AdminLTE)-->
     <!-- apexcharts -->
     <link
@@ -84,7 +84,7 @@
         <!--begin::Sidebar Brand-->
         <div class="sidebar-brand">
           <!--begin::Brand Link-->
-          <a href="./index.html" class="brand-link">
+          <a class="brand-link">
             <!--begin::Brand Image-->
             <img
               src="{{ asset('img/logo.png') }}"
@@ -123,7 +123,6 @@
                   <i class="nav-icon bi bi-clipboard-fill"></i>
                   <p>
                     DATA PRODUK
-                    <span class="nav-badge badge text-bg-secondary me-3">6</span>
                   </p>
                 </a>
               </li>
@@ -132,7 +131,6 @@
                   <i class="nav-icon bi bi-clipboard-fill"></i>
                   <p>
                     DATA PAKET
-                    <span class="nav-badge badge text-bg-secondary me-3">6</span>
                   </p>
                 </a>
               </li>
@@ -187,7 +185,7 @@
       crossorigin="anonymous"
     ></script>
     <!--end::Required Plugin(Bootstrap 5)--><!--begin::Required Plugin(AdminLTE)-->
-    <script src="/admin/js/adminlte.js"></script>
+    <script src="{{ asset('/adminlte/js/adminlte.js') }}"></script>
     <!--end::Required Plugin(AdminLTE)--><!--begin::OverlayScrollbars Configure-->
     <script>
       const SELECTOR_SIDEBAR_WRAPPER = '.sidebar-wrapper';
@@ -415,6 +413,7 @@
       const sparkline3 = new ApexCharts(document.querySelector('#sparkline-3'), option_sparkline3);
       sparkline3.render();
     </script>
+
     <!--end::Script-->
   </body>
   <!--end::Body-->

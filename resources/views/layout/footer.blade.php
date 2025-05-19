@@ -43,7 +43,7 @@
 
         <div class="links">
             <h3>Link</h3>
-            <a href="/">Beranda</a>
+            <a href="{{ route('beranda') }}">Beranda</a>
             <a href="{{ route('tentang') }}">Tentang Kami</a>
             <a href="{{ route('katalog') }}">Katalog</a>
             <a href="{{ route('sewa') }}">Cara Sewa</a>

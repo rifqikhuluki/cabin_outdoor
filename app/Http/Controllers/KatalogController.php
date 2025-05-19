@@ -37,13 +37,6 @@ class KatalogController extends Controller
         $product = Products::where('id_produk', $id_produk)->firstOrFail();;
         return view('katalog-detail', compact('product'));
     }
-    
-    public function home()
-    {
-        $products = Products::take(5)->get();
-        
-        return view('home', compact('products'));
-    }
 
     public function detailpaket($id_paket)
     {

@@ -192,7 +192,7 @@ body {
     background-color: #EFEEEA;
     border-radius: 15px;
     width: 60%;
-    box-shadow: -10px 10px 00px 0px rgb(185, 185, 187);
+    box-shadow: -10px 10px 0px 0px rgb(185, 185, 187);
     margin-bottom: 2rem;
 }
 .sewa-main5 > div{
@@ -219,7 +219,7 @@ body {
     background-color: #EFEEEA;
     border-radius: 15px;
     width: 60%;
-    box-shadow: -10px 10px 00px 0px rgb(185, 185, 187);
+    box-shadow: -10px 10px 0px 0px rgb(185, 185, 187);
     margin-bottom: 2rem;
 }
 .sewa-main6 > div{
@@ -236,4 +236,131 @@ body {
     color: var(--primary);
     font-size: 1.250rem;
     font-weight: 600;
+}
+
+/* Media Queries */
+
+/* Tablet */
+@media (max-width: 1024px) and (min-width: 769px) {
+    html {
+        font-size: 62.5%;
+    }
+    .sewa{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .sewa-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .sewa-main1{
+        width: 80%;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .sewa-main1 .text1 h3{
+        text-align: center;
+    }
+    .sewa-main2{
+        width: 80%;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .sewa-main2 .text2 h3{
+        text-align: center;
+    }
+    .sewa-main3{
+        width: 80%;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .sewa-main3 .text3 h3{
+        text-align: center;
+    }
+    .sewa-main4{
+        width: 80%;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .sewa-main4 .text4 h3{
+        text-align: center;
+    }
+    .sewa-main5{
+        width: 80%;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .sewa-main5 .text5 h3{
+        text-align: center;
+    }
+    .sewa-main6{
+        width: 80%;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .sewa-main6 .text6 h3{
+        text-align: center;
+    }
+}
+
+/* Mobile Phone */
+@media (max-width: 768px) {
+    html {
+        font-size: 55%;
+    }
+    .sewa{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .sewa-main1{
+        width: 100%;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .sewa-main1 .text1 h3{
+        text-align: center;
+    }
+    .sewa-main2{
+        width: 100%;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .sewa-main2 .text2 h3{
+        text-align: center;
+    }
+    .sewa-main3{
+        width: 100%;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .sewa-main3 .text3 h3{
+        text-align: center;
+    }
+    .sewa-main4{
+        width: 100%;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .sewa-main4 .text4 h3{
+        text-align: center;
+    }
+    .sewa-main5{
+        width: 100%;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .sewa-main5 .text5 h3{
+        text-align: center;
+    }
+    .sewa-main6{
+        width: 100%;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .sewa-main6 .text6 h3{
+        text-align: center;
+    }
 }

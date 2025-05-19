@@ -38,23 +38,29 @@
                   <div class="card-body">
                     <div class="mb-3">
                       <label for="exampleInputEmail1" class="form-label">Nama Produk</label>
-                      <input type="text" name="nama_produk" required class="form-control" id="exampleInputEmail1" value="{{ $produk->nama_produk }}" placeholder="Masukkan Nama Produk">
+                      <input type="text" name="nama_produk" required class="form-control" id="exampleInputEmail1" value="{{ $produk->nama_produk }}">
                     </div>
                     <div class="mb-3">
                       <label for="exampleInputPassword1" class="form-label">Kategori</label>
-                      <input type="number" name="id_kategori" required class="form-control" id="exampleInputPassword1" value="{{ $produk->id_kategori }}" placeholder="Pilih Kategori">
+                      <select type="number" name="id_kategori" required class="form-control" id="exampleInputPassword1" value="{{ $produk->id_kategori }}">
+                        <option value="1">Tas</option>
+                        <option value="2">Tenda</option>
+                        <option value="3">Sepatu</option>
+                        <option value="4">Pakaian</option>
+                        <option value="5">Lainnya</option>
+                      </select>
                     </div>
                     <div class="mb-3">
                         <label for="exampleInputPassword1" class="form-label">Harga</label>
-                        <input type="number" name="harga" required class="form-control" id="exampleInputPassword1" value="{{ $produk->harga }}" placeholder="Masukkan Harga Produk">
+                        <input type="number" name="harga" required class="form-control" id="exampleInputPassword1" value="{{ $produk->harga }}">
                     </div>
                     <div class="mb-3">
                         <label for="exampleInputPassword1" class="form-label">Deskripsi</label>
-                        <input type="text" name="deskripsi_produk" required class="form-control" id="exampleInputPassword1" value="{{ $produk->deskripsi_produk }}" placeholder="Masukkan Deskripsi Produk">
+                        <input type="text" name="deskripsi_produk" required class="form-control" id="exampleInputPassword1" value="{{ $produk->deskripsi_produk }}">
                     </div>
                     <div class="mb-3">
                         <label for="exampleInputPassword1" class="form-label">Detail</label>
-                        <input type="text" name="detail_produk" required class="form-control" id="exampleInputPassword1" value="{{ $produk->detail_produk }}" placeholder="Masukkan Detail Produk">
+                        <input type="text" name="detail_produk" required class="form-control" id="exampleInputPassword1" value="{{ $produk->detail_produk }}">
                     </div>
                     <div class="mb-3">
                       <label for="exampleInputPassword1" class="form-label">Upload Gambar</label>
