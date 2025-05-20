@@ -86,6 +86,7 @@ body {
     width: 60%;
     box-shadow: -10px 10px 0px 0px rgb(185, 185, 187);
     margin-bottom: 2rem;
+    transition: transform 0.3s ease;
 }
 .sewa-main1 > div{
     padding: 2rem;
@@ -103,6 +104,10 @@ body {
     font-weight: 600;
 }
 
+.sewa-main1:hover{
+    transform: translateY(-5px);
+}
+
 .sewa-main2{
     display: flex;
     justify-content: flex-start;
@@ -113,7 +118,9 @@ body {
     width: 60%;
     box-shadow: -10px 10px 0px 0px rgb(185, 185, 187);
     margin-bottom: 2rem;
+    transition: transform 0.3s ease;
 }
+
 .sewa-main2 > div{
     padding: 2rem;
 }
@@ -130,6 +137,10 @@ body {
     font-weight: 600;
 }
 
+.sewa-main2:hover{
+    transform: translateY(-5px);
+}
+
 .sewa-main3{
     display: flex;
     justify-content: flex-start;
@@ -140,6 +151,7 @@ body {
     width: 60%;
     box-shadow: -10px 10px 0px 0px rgb(185, 185, 187);
     margin-bottom: 2rem;
+    transition: transform 0.3s ease;
 }
 .sewa-main3 > div{
     padding: 2rem;
@@ -157,6 +169,10 @@ body {
     font-weight: 600;
 }
 
+.sewa-main3:hover{
+    transform: translateY(-5px);
+}
+
 .sewa-main4{
     display: flex;
     justify-content: flex-start;
@@ -167,6 +183,7 @@ body {
     width: 60%;
     box-shadow: -10px 10px 0px 0px rgb(185, 185, 187);
     margin-bottom: 2rem;
+    transition: transform 0.3s ease;
 }
 .sewa-main4 > div{
     padding: 2rem;
@@ -184,6 +201,10 @@ body {
     font-weight: 600;
 }
 
+.sewa-main4:hover{
+    transform: translateY(-5px);
+}
+
 .sewa-main5{
     display: flex;
     justify-content: flex-start;
@@ -194,6 +215,7 @@ body {
     width: 60%;
     box-shadow: -10px 10px 0px 0px rgb(185, 185, 187);
     margin-bottom: 2rem;
+    transition: transform 0.3s ease;
 }
 .sewa-main5 > div{
     padding: 2rem;
@@ -211,6 +233,10 @@ body {
     font-weight: 600;
 }
 
+.sewa-main5:hover{
+    transform: translateY(-5px);
+}
+
 .sewa-main6{
     display: flex;
     justify-content: flex-start;
@@ -221,6 +247,7 @@ body {
     width: 60%;
     box-shadow: -10px 10px 0px 0px rgb(185, 185, 187);
     margin-bottom: 2rem;
+    transition: transform 0.3s ease;
 }
 .sewa-main6 > div{
     padding: 2rem;
@@ -236,6 +263,10 @@ body {
     color: var(--primary);
     font-size: 1.250rem;
     font-weight: 600;
+}
+
+.sewa-main6:hover{
+    transform: translateY(-5px);
 }
 
 /* Media Queries */

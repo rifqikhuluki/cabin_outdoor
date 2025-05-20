@@ -38,16 +38,16 @@
                 </div>
                 <!-- /.card-header -->
                 <div class="table-responsive">
-                    <table class="table font-md-small table-bordered" >
+                    <table class="table table-bordered" >
                     <thead>
                         <tr>
                         <th style="width: 10px">id</th>
-                        <th>Gambar</th>
-                        <th>Kategori</th>
+                        <th class="d-none d-sm-table-cell">Gambar</th>
+                        <th class="d-none d-sm-table-cell">Kategori</th>
                         <th>Nama</th>
-                        <th>Harga</th>
-                        <th>Deskripsi</th>
-                        <th>Detail</th>
+                        <th class="d-none d-sm-table-cell">Harga</th>
+                        <th class="d-none d-sm-table-cell">Deskripsi</th>
+                        <th class="d-none d-sm-table-cell">Detail</th>
                         <th>Aksi</th>
                         </tr>
                     </thead>
@@ -55,17 +55,17 @@
                         @foreach ($dataProduk as $row)
                         <tr >
                             <td>{{ $row->id_produk }}.</td>
-                            <td>
+                            <td class="d-none d-sm-table-cell">
                                 <img src="{{ asset('/storage/images/' . $row->gambar) }}" 
                                     alt="foto produk"
                                     class="img-fluid d-block mx-auto"
                                     style="max-width: 200px; width: 100%;">
                             </td>
-                            <td>{{ $row->id_kategori }}</td>
+                            <td class="d-none d-sm-table-cell">{{ $row->id_kategori }}</td>
                             <td>{{ $row->nama_produk }}</td>
-                            <td>{{ $row->harga }}</td>
-                            <td>{{ $row->deskripsi_produk }}</td>
-                            <td>
+                            <td class="d-none d-sm-table-cell">{{ $row->harga }}</td>
+                            <td class="d-none d-sm-table-cell">{{ $row->deskripsi_produk }}</td>
+                            <td class="d-none d-sm-table-cell">
                                 <ul>
                                 @foreach (explode(',', $row->detail_produk) as $detail)
                                     <li>{{ trim($detail) }}</li>

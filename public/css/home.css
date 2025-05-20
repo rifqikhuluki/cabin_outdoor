@@ -256,6 +256,7 @@ body {
     text-align: center;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     padding: 15px;
+    transition: transform 0.3s ease;
 }
 .card img {
     width: 100%;
@@ -281,6 +282,10 @@ body {
 }
 .card button:hover {
     background-color: #296b94;
+}
+
+.card:hover{
+    transform: translateY(-5px);
 }
 
 .tombol button {

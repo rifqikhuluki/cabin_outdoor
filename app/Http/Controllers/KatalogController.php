@@ -11,15 +11,12 @@ class KatalogController extends Controller
 {
     public function katalog(Request $request)
     {
-        $id_kategori = $request->query('kategori');  // Menangkap kategori dari query string
-        
-        $kategori = Categories::all();  // Ambil semua kategori untuk dropdown
+        $id_kategori = $request->query('kategori');
+        $kategori = Categories::all();
         
         if ($id_kategori) {
-            // Jika id_kategori ada, filter produk berdasarkan kategori
             $products = Products::where('id_kategori', $id_kategori)->paginate(10);
         } else {
-            // Jika tidak ada kategori yang dipilih, tampilkan semua produk
             $products = Products::paginate(10);
         }
 
@@ -35,12 +32,16 @@ class KatalogController extends Controller
     public function detail($id_produk)
     {
         $product = Products::where('id_produk', $id_produk)->firstOrFail();;
-        return view('katalog-detail', compact('product'));
+        return view('katalog-detail', [
+            'product' => $product
+        ]);
     }
 
     public function detailpaket($id_paket)
     {
         $paket = Pakets::where('id_paket', $id_paket)->firstOrFail();;
-        return view('paket-detail', compact('paket'));
+        return view('paket-detail', [
+            'paket' => $paket
+        ]);
     }
 }

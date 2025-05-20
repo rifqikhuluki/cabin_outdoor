@@ -111,6 +111,7 @@ body {
     text-align: center;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     padding: 15px;
+    transition: transform 0.3s ease;
 }
 .card img {
     width: 100%;
@@ -123,6 +124,10 @@ body {
     font-weight: bold;
     text-transform: uppercase;
     margin-bottom: 8px;
+}
+
+.card:hover{
+    transform: translateY(-5px);
 }
 
 .card button {
@@ -214,6 +219,7 @@ body {
     text-align: center;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     padding: 15px;
+    transition: transform 0.3s ease;
 }
 .paket-card img {
     width: 100%;
@@ -226,6 +232,9 @@ body {
     font-weight: bold;
     text-transform: uppercase;
     margin-bottom: 8px;
+}
+.paket-card:hover{
+    transform: translateY(-5px);
 }
 
 .paket-card button {

@@ -37,16 +37,16 @@
                     </div>
                 </div>
                 <!-- /.card-header -->
-                <div class="card-body">
+                <div class="table-responsive">
                     <table class="table table-bordered">
                     <thead>
                         <tr>
                         <th style="width: 10px">id</th>
-                        <th>Gambar</th>
+                        <th class="d-none d-sm-table-cell">Gambar</th>
                         <th>Nama</th>
-                        <th>Harga</th>
-                        <th>Deskripsi</th>
-                        <th>Detail</th>
+                        <th class="d-none d-sm-table-cell">Harga</th>
+                        <th class="d-none d-sm-table-cell">Deskripsi</th>
+                        <th class="d-none d-sm-table-cell">Detail</th>
                         <th>Aksi</th>
                         </tr>
                     </thead>
@@ -54,13 +54,15 @@
                         @foreach ($dataPaket as $row)
                         <tr>
                             <td>{{ $row->id_paket }}</td>
-                            <td>
-                                <img src="{{ asset('/storage/images/' . $row->gambar) }}" alt="foto produk" width="200px">
+                            <td class="d-none d-sm-table-cell">
+                                <img src="{{ asset('/storage/images/' . $row->gambar) }}" 
+                                    class="img-fluid d-block mx-auto"
+                                    style="max-width: 200px; width: 100%;">
                             </td>
                             <td>{{ $row->nama_paket }}</td>
-                            <td>{{ $row->harga }}</td>
-                            <td>{{ $row->deskripsi_paket }}</td>
-                            <td>
+                            <td class="d-none d-sm-table-cell">{{ $row->harga }}</td>
+                            <td class="d-none d-sm-table-cell">{{ $row->deskripsi_paket }}</td>
+                            <td class="d-none d-sm-table-cell">
                                 <ul>
                                 @foreach (explode(',', $row->detail_paket) as $detail)
                                     <li>{{ trim($detail) }}</li>

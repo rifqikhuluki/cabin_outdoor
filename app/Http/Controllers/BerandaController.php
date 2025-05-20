@@ -12,7 +12,9 @@ class BerandaController extends Controller
     {
         $products = Products::take(5)->get();
         
-        return view('home', compact('products'));
+        return view('home', [
+            'products' => $products
+        ]);
     }
     public function blog1()
     {
