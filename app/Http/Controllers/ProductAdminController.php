@@ -24,8 +24,15 @@ class ProductAdminController extends Controller
     }
     function insert(Request $request)
     {
-        $dataInsert = $request->except('_token');
-    
+        $dataInsert = $request->validate([
+            'nama_produk' => 'required|string',
+            'id_kategori' => 'required|integer',
+            'harga' => 'required|numeric',
+            'deskripsi_produk' => 'required|string',
+            'detail_produk' => 'required|string',
+            'gambar' => 'required|image|mimes:jpeg,png,jpg',
+        ]);
+        
         $filename = $request->file('gambar')->getClientOriginalName();
         Storage::putFileAs('public/images', $request->file('gambar'), $filename);
         $dataInsert['gambar'] = $filename;

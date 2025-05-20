@@ -27,9 +27,7 @@
                         @endforeach
                     </ul>
                     <div class="d-flex align-items-center">
-                        <button class="btn btn-primary" type="button">
-                            <a href="{{ $link }}" class="sewa-btn">Sewa Sekarang</a>
-                        </button>
+                        <a href="{{ $link }}" class="sewa-btn btn btn-primary">Sewa Sekarang</a>
                         <div class="medium ms-3 fs-5 fw-bolder">{{ number_format($paket->harga) }} /Hari</div>
                     </div>
                 </div>

@@ -24,7 +24,13 @@ class PaketsAdminController extends Controller
     }
     function insert(Request $request)
     {
-        $dataInsert = $request->except('_token');
+        $dataInsert = $request->validate([
+            'nama_paket' => 'required|string',
+            'harga' => 'required|numeric',
+            'deskripsi_paket' => 'required|string',
+            'detail_paket' => 'required|string',
+            'gambar' => 'required|image|mimes:jpeg,png,jpg',
+        ]);
     
         $filename = $request->file('gambar')->getClientOriginalName();
         Storage::putFileAs('public/images', $request->file('gambar'), $filename);
