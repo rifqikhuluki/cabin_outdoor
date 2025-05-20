@@ -69,7 +69,7 @@
                 </div>
             @endif
             <div class="input-group mb-3">
-              <input type="email" class="form-control" name="email" placeholder="Email" />
+              <input type="text" class="form-control" name="email" placeholder="Username" />
               <div class="input-group-text"><span class="bi bi-envelope"></span></div>
             </div>
             <div class="input-group mb-3">

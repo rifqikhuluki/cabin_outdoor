@@ -31,17 +31,27 @@ class KatalogController extends Controller
 
     public function detail($id_produk)
     {
-        $product = Products::where('id_produk', $id_produk)->firstOrFail();;
+        $product = Products::where('id_produk', $id_produk)->firstOrFail();
+
+        $pesan = "Halo, saya ingin menyewa $product->nama_produk, apakah tersedia?";
+        $link = "https://wa.me/6281336038234?text=" . urlencode($pesan);
+
         return view('katalog-detail', [
-            'product' => $product
+            'product' => $product,
+            'link' => $link
         ]);
     }
 
     public function detailpaket($id_paket)
     {
-        $paket = Pakets::where('id_paket', $id_paket)->firstOrFail();;
+        $paket = Pakets::where('id_paket', $id_paket)->firstOrFail();
+
+        $pesan = "Halo, saya ingin menyewa $paket->nama_paket, apakah tersedia?";
+        $link = "https://wa.me/6281336038234?text=" . urlencode($pesan);
+
         return view('paket-detail', [
-            'paket' => $paket
+            'paket' => $paket,
+            'link' => $link
         ]);
     }
 }

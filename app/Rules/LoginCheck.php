@@ -42,7 +42,7 @@ class LoginCheck implements ValidationRule
             Session::put('loginStatus', true);
             Session::put('adminData', $adminData);
         }else{
-            $fail('email atau password ada yang salah');
+            $fail('username atau password ada yang salah');
         }
     }
 }

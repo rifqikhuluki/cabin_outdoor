@@ -12,7 +12,7 @@ const swiper = new Swiper('.swiper', {
     keyboard: true,
     mousewheel: true,
     autoplay: {
-        delay: 2000, // Waktu dalam milidetik antara setiap slide (misalnya 3000ms = 3 detik)
-        disableOnInteraction: false, // Jika true, autoplay berhenti saat ada interaksi dengan swiper
+        delay: 2000,
+        disableOnInteraction: false,
     },
 });

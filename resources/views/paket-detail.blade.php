@@ -28,7 +28,7 @@
                     </ul>
                     <div class="d-flex align-items-center">
                         <button class="btn btn-primary" type="button">
-                            <a href="https://wa.me/6281336038234" class="sewa-btn">Sewa Sekarang</a>
+                            <a href="{{ $link }}" class="sewa-btn">Sewa Sekarang</a>
                         </button>
                         <div class="medium ms-3 fs-5 fw-bolder">{{ number_format($paket->harga) }} /Hari</div>
                     </div>

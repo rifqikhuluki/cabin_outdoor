@@ -15,8 +15,8 @@ class LoginController extends Controller
     function process(Request $request)
     {
         $request->validate([
-            'email' => 'required|email',
-            'password' => ['required', new LoginCheck($request)] // ← ini sudah benar
+            'email' => 'required',
+            'password' => ['required', new LoginCheck($request)]
         ]);
 
         return redirect()->route('admin.dashboard');
