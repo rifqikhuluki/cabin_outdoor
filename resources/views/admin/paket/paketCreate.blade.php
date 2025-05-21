@@ -63,7 +63,7 @@
                   <!--begin::Footer-->
                   <div class="card-footer">
                     <button type="submit" class="btn btn-primary">Simpan Data Paket</button>
-                    <a href="{{ route('admin.product') }}" class="btn btn-warning">Kembali</a>
+                    <a href="{{ route('admin.paket') }}" class="btn btn-warning">Kembali</a>
                   </div>
                   <!--end::Footer-->
                 </form>
